@@ -1,10 +1,14 @@
 <html>
 <head>
+	<meta name='viewport' content='width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=yes;'>
+
 	<title>antipattern</title>
 	<style>
 	html, body, h1, p, a {
 		padding: 0;
 		margin: 0;
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
 	}
 
 	@font-face {font-family: 'DecimaMonoX';src: url('webfonts/2DC8F3_0_0.eot');src: url('webfonts/2DC8F3_0_0.eot?#iefix') format('embedded-opentype'),url('webfonts/2DC8F3_0_0.woff2') format('woff2'),url('webfonts/2DC8F3_0_0.woff') format('woff'),url('webfonts/2DC8F3_0_0.ttf') format('truetype');}
@@ -42,6 +46,19 @@
 	a,
 	a:visited {
 		color: #fff;
+	}
+	@media (max-width: 989px) {
+	  	p {
+	  		margin-top: 64px;
+			width: 65%;
+		}
+	}
+
+		@media (max-width: 523px) {
+	  	p {
+	  		margin-top: 32px;
+			width: 100%;
+		}
 	}
 	</style>
 </head>
