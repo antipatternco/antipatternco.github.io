@@ -1,0 +1,84 @@
+<html>
+<head>
+	<meta name='viewport' content='width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=yes;'>
+
+	<title>antipattern</title>
+	<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+
+	<h1><a href="index.html">antipattern</a></h1>
+
+	<h2>WORK</h2>
+		<section id="main">
+			<h3 class="solid">solid steel</h3>
+			<img src="solid.jpg"/>
+			<h3 class="convergence">convergence</h3>
+			<img src="conv.jpg" />
+			<h3 class="juice alt">juice</h3>
+			<img src="juice.jpg" />
+			<h3 class="shapes">shapes</h3>
+			<img src="2016.jpg" />
+		</section>
+
+	<div id="h4s">
+		<h4><a href="about.html">ABOUT</a></h4>
+		<h4><a href="contact.html">CONTACT</a></h4>
+	</div>
+
+	<h5><a href="http://twitter.com/antipatternco">@antipatternco</a></h5>
+
+	<div class="create_t" data-src="kenjiendo2.png">
+	</div>
+
+	<script src="jquery.min.js"></script>
+	<script src="html2canvas.js"></script>
+	<script src="script.js"></script>
+	<script>
+	window.imgdata = "";
+	html2canvas(document.body, {
+  			onrendered: function(canvas) {
+  				canvas.setAttribute("id", "maincanvas");
+    			document.body.appendChild(canvas);
+
+    			var dupeCanvas = document.createElement('canvas');
+    			dupeCanvas.setAttribute("id", "dupecanvas");
+		    	dupeCanvas.width = canvas.width;
+    			dupeCanvas.height = canvas.height;
+    			var context = dupeCanvas.getContext('2d');
+    			context.drawImage(canvas, 0, 0);
+    			document.body.appendChild(dupeCanvas);
+    			window.imgdata = dupeCanvas.toDataURL();
+    			$('#main').css('visibility', 'hidden');
+    			letsdothis();
+  			}
+		});
+	</script>
+	
+	<script type="text/javascript">
+	$(function(){
+
+
+		/* LOAD PROJECT IMAGE ON HOVER ON ITS NAME */
+		var bg = $('#main');
+		$('h3').on('mouseover', function(){
+			
+			// make names easier to click on by making some more space
+			//$('h3').css('line-height', '100%').css('color', '#f7f7f7');
+			
+			////// var img = $(this).next('img').attr('src');
+			////// bg.css('background-image', 'url('+img+')');
+			//$('h3').not($(this)).css('opacity', '0.1');
+		}).on('mouseout', function(){
+			//$('h3').css('line-height', '40%').css('opacity', '1').css('color', '#333');
+			
+			//////bg.css('background-image', 'none');
+
+		});
+
+		
+	})
+	</script>
+</body>
+</html>

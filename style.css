@@ -1,0 +1,213 @@
+@font-face {font-family: 'DecimaMonoX';src: url('webfonts/2DC8F3_0_0.eot');src: url('webfonts/2DC8F3_0_0.eot?#iefix') format('embedded-opentype'),url('webfonts/2DC8F3_0_0.woff2') format('woff2'),url('webfonts/2DC8F3_0_0.woff') format('woff'),url('webfonts/2DC8F3_0_0.ttf') format('truetype');}
+@font-face {font-family: 'DecimaPro';src: url('webfonts/2DC8F3_1_0.eot');src: url('webfonts/2DC8F3_1_0.eot?#iefix') format('embedded-opentype'),url('webfonts/2DC8F3_1_0.woff2') format('woff2'),url('webfonts/2DC8F3_1_0.woff') format('woff'),url('webfonts/2DC8F3_1_0.ttf') format('truetype');}
+
+html, body, h1, h2, h3, h4, h5, p, a, span {
+	padding: 0;
+	margin: 0;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+body {
+	background-color: #f7f7f7;
+	font-family: DecimaPro;
+	font-weight: normal;
+	font-style: normal;
+	font-size: 32px;
+	width: 100%;
+	height: 100%;
+
+}
+
+#main {
+	position: absolute;
+	top: 60px;
+	left: 60px;
+	right: 0;
+	bottom: 0;
+	overflow: hidden;
+	background-size: cover;
+}
+
+#about #main,
+#contact #main {
+	background-color: #333;
+	color: #f7f7f7;
+	bottom: 60px;
+	right: 60px;
+}
+
+img {
+	display: none;
+}
+
+/**************
+*             *
+*  HEADINGS   *
+*             *
+***************/
+
+h1, h2, h4, h5 {
+	font-family: DecimaMonoX;
+	font-weight: normal;
+	font-style: normal;
+	font-size: 18px;
+}
+
+h3 {
+	font-family: DecimaPro;
+	font-weight: normal;
+	font-style: normal;
+	font-size: 32px;
+	cursor: pointer;
+	transition: line-height 300ms linear;
+}
+
+h3:hover {
+	/*color: #f7f7f7;
+	transition: color 500ms linear;*/
+}
+
+h1, h2, #h4s, h5 {
+	position: absolute;
+}
+
+h1 {
+	top: 6px;
+	left: 30px;
+}
+
+h2 {
+	top: 30px;
+	left: 220px;
+}
+
+h3 {
+	font-size: 120px;
+	margin: 0 0 0 160px;
+	line-height: 40%;
+}
+
+h3:first-of-type {
+	margin-top: 60px;
+}
+
+h3.alt {
+	padding-left: 12px;
+}
+
+/* RIGHT HAND NAV ITEMS */
+#h4s {
+	top: 15px;
+	right: -124px;
+}
+
+h4 {
+	float: left;
+	margin-right: 24px;
+}
+
+h1, #h4s{
+	transform-origin: 0% 100%;
+	transform: rotateZ(90deg);
+}
+
+h5 {
+	bottom: 30px;
+	right: 30px;
+}
+
+#main p {
+	margin: 36px 320px 0 160px;
+	font-size: 48px;
+	line-height: 100%;
+}
+
+a,
+a:visited {
+	color: #333;
+	text-decoration: none;
+}
+
+a:hover {
+	color: #000;
+}
+
+
+
+/**************
+*             *
+* ABOUT PAGE  *
+*             *
+***************/
+
+#about #main p {
+	transition: all 1000ms ease-in;
+}
+
+#about #main.initial p {
+	margin-right: 0;
+	letter-spacing: 120px;
+}
+
+#contact #main p {
+	transition: all 1000ms ease-in;
+	letter-spacing: -10px;
+	margin-top: 180px;
+	font-family: DecimaMonoX;
+	font-size: 36px;
+}
+
+#contact #main.initial p {
+	margin-right: 0;
+	font-size: 900%;
+	margin-top: 40px;
+	letter-spacing: -75px;
+	
+}
+
+.create_t {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	pointer-events: none;
+}
+
+#main {
+/*	visibility: hidden;*/
+}
+
+#dupecanvas {
+	display: none;
+}
+
+@media (max-width: 768px) {
+	h3 {
+		font-size: 36px;
+		margin-left: 24px;
+		line-height: 200%;
+	}
+
+	h2 {
+		left: 80px;
+	}
+
+	#main p {
+		margin-left: 36px;
+		font-size: 21px;
+		margin-right: 24px;
+	}
+
+	#about #main.initial p {
+		letter-spacing: 24px;
+	}
+
+	.create_t {
+		left: 0;
+	}
+}
+
+@media (max-width: 523px) {
+}

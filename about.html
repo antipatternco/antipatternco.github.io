@@ -1,0 +1,35 @@
+<html id="about">
+<head>
+	<meta name='viewport' content='width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=yes;'>
+
+	<title>antipattern — about</title>
+	<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+	<h1><a href="index.html">antipattern</a></h1>
+
+	<h2>WORK</h2>
+		<section id="main" class="initial">
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat. Duis aute irure dolor in.</p>
+		</section>
+
+	<div id="h4s">
+		<h4><a href="about.html">ABOUT</a></h4>
+		<h4><a href="contact.html">CONTACT</a></h4>
+	</div>
+
+	<h5>@antipatternco</h5>
+
+	<script src="jquery.min.js"></script>
+	<script type="text/javascript">
+	$(function(){
+		$('#main').on('mouseover', function(){
+			$(this).removeClass('initial');
+		});
+	})
+	</script>
+</body>
+</html>
