@@ -63,7 +63,8 @@ h3 {
 	transition: line-height 300ms linear;
 }
 
-h3:hover {
+#main:hover {
+	cursor: pointer;
 	/*color: #f7f7f7;
 	transition: color 500ms linear;*/
 }
@@ -86,6 +87,19 @@ h3 {
 	font-size: 120px;
 	margin: 0 0 0 160px;
 	line-height: 40%;
+	color: #fff;
+}
+
+.tight .h3container:nth-of-type(2) {
+	margin-top: -60px;
+}
+
+.tight .h3container:nth-of-type(3) {
+	margin-top: -60px;
+}
+
+.tight .h3container:nth-of-type(4) {
+	margin-top: -60px;
 }
 
 h3:first-of-type {
@@ -175,8 +189,9 @@ a:hover {
 	pointer-events: none;
 }
 
-#main {
-/*	visibility: hidden;*/
+#maincanvas {
+	position: absolute;
+	pointer-events: none;
 }
 
 #dupecanvas {

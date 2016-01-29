@@ -26,6 +26,7 @@ var image=new Image();
 
 window.letsdothis = function(){
 	image.src=window.imgdata;
+	console.log(window.imgdata);
 	getUA();
 	setSize();
 	preload();
@@ -47,7 +48,8 @@ function preload(){
 		}
 		var b=0;
 		var e=0;
-		a(["http://kenjiendo.com/testsite/wp-content/themes/kenjiendo_v2/img/kenjiendo2.png","http://kenjiendo.com/testsite/wp-content/themes/kenjiendo_v2/img/main.jpg"],function(g,f){b=Math.ceil(100*f/g)});
+		a(["http://kenjiendo.com/testsite/wp-content/themes/kenjiendo_v2/img/kenjiendo2.png","http://kenjiendo.com/testsite/wp-content/themes/kenjiendo_v2/img/main.jpg"],function(g,f){b=Math.ceil(100*f/g)}
+		);
 		var d=window.setInterval(function(){if(e>=100){window.clearInterval(d);
 			$("body").removeClass("preload");
 			// setTimeout(function(){$(".firstload").remove()},1000);
@@ -170,7 +172,7 @@ function preload(){
 				var j=1-g/10;
 				var b=80+(g*3);
 				ctx_t.beginPath();
-				ctx_t.fillStyle="rgba(255,0,0,"+j+")";
+				ctx_t.fillStyle="rgba(255,255,255,"+j+")";
 				ctx_t.arc(tX,tY,b,0,Math.PI*2,true);
 				ctx_t.closePath();
 				ctx_t.fill()
@@ -195,7 +197,7 @@ function preload(){
 						if(a<stroke_megane){
 							ctx_t.beginPath();
 							ctx_t.lineWidth=0.3;
-							ctx_t.strokeStyle="rgba(255, 255, 255,1)";
+							ctx_t.strokeStyle="rgba(49,49,49,1)";
 							ctx_t.lineTo(d.x+(Math.random()*jimble-jimble/2),d.y+(Math.random()*jimble-jimble/2));
 							ctx_t.lineTo(f.x+(Math.random()*jimble-jimble/2),f.y+(Math.random()*jimble-jimble/2));
 							ctx_t.lineTo(d.x0,d.y0);ctx_t.lineTo(f.x0,f.y0);

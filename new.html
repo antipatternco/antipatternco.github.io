@@ -5,21 +5,29 @@
 	<title>antipattern</title>
 	<link rel="stylesheet" href="style.css" />
 </head>
-<body>
+<body class="tight">
 
 
 	<h1><a href="index.html">antipattern</a></h1>
 
 	<h2>WORK</h2>
 		<section id="main">
+			<div class="h3container">
 			<h3 class="solid">solid steel</h3>
-			<img src="solid.jpg"/>
+			</div>
+			<img src="1.jpeg"/>
+			<div class="h3container">
 			<h3 class="convergence">convergence</h3>
-			<img src="conv.jpg" />
+			</div>
+			<img src="2.jpeg" />
+			<div class="h3container">
 			<h3 class="juice alt">juice</h3>
-			<img src="juice.jpg" />
+			</div>
+			<img src="3.jpeg" />
+			<div class="h3container">
 			<h3 class="shapes">shapes</h3>
-			<img src="2016.jpg" />
+			</div>
+			<img src="4.jpeg" />
 		</section>
 
 	<div id="h4s">
@@ -50,7 +58,7 @@
     			context.drawImage(canvas, 0, 0);
     			document.body.appendChild(dupeCanvas);
     			window.imgdata = dupeCanvas.toDataURL();
-    			$('#main').css('visibility', 'hidden');
+    			$('#main h3').css('visibility', 'hidden');
     			letsdothis();
   			}
 		});
@@ -62,18 +70,20 @@
 
 		/* LOAD PROJECT IMAGE ON HOVER ON ITS NAME */
 		var bg = $('#main');
-		$('h3').on('mouseover', function(){
+		$('.h3container').on('mouseover', function(){
 			
 			// make names easier to click on by making some more space
 			//$('h3').css('line-height', '100%').css('color', '#f7f7f7');
 			
-			////// var img = $(this).next('img').attr('src');
-			////// bg.css('background-image', 'url('+img+')');
+			var img = $(this).next('img').attr('src');
+			bg.css('background-image', 'url('+img+')');
 			//$('h3').not($(this)).css('opacity', '0.1');
-		}).on('mouseout', function(){
+		})
+
+		bg.on('mouseout', function(){
 			//$('h3').css('line-height', '40%').css('opacity', '1').css('color', '#333');
 			
-			//////bg.css('background-image', 'none');
+			bg.css('background-image', 'none');
 
 		});
 
